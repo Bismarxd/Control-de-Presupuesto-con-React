@@ -1,0 +1,556 @@
+:root {
+    --azul: #3b82f6;
+    --blanco: #ffffff;
+    --gris-claro: #f5f5f5;
+    --gris: #94a3b8;
+    --gris-oscuro: #64748b;
+    --negro: #000;
+    --color1:#474883;
+    --color2: #042a67;
+    --font-family1: 'Alkatra', cursive;
+    --font-family2: 'Bebas Neue', cursive;
+    --font-family3: 'Delicious Handrawn', cursive;
+    --font-family4: 'Indie Flower', cursive;
+    --font-family5: 'Roboto Slab', serif;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Alkatra', cursive;
+    background-image: linear-gradient(to right, #918e8e, #ffffff);
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.fijar {
+    overflow: hidden;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+
+h2 {
+    font-size: 3rem;
+}
+
+.sombra {
+    box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
+    background-color: var(--blanco);
+    padding: 4rem;
+    border-radius: 1.2rem;
+
+
+}
+
+header {
+    position: relative;
+    background-image: url('./img/banner2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom -4.5rem;
+    margin-top: -4rem;
+
+}
+.titulo{
+    
+    font-size: 15rem;
+    color: #fff;
+    font-family: 'Delicious Handrawn', cursive;
+    
+    top: -4rem;
+    left: 50%;
+    transform: translateY(20rem);
+
+}
+header h1 {
+    padding: 3rem 0;
+    margin: 0;
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+.formulario {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10rem 0;
+    border-radius: 4rem;
+
+    
+}
+
+::placeholder {
+    color: #fff; /* Cambia el color del placeholder a gris */
+    font-size: 2rem;
+  }
+@media (min-width: 768px) {
+    .formulario {
+        padding: 5rem 0;
+        width: 60rem;
+    }
+}
+.formulario legend {
+    font-size: 4.5rem;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-family: var(--font-family4);
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color1);
+}
+.formulario .campo {
+    display: grid;
+    
+    margin-bottom: 2rem;
+}
+
+.formulario label {
+
+    font-weight: bold; /* Aplica un estilo de fuente negrita */
+    color: #333; /* Ajusta el color del texto */
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    
+    border: 2px solid #ccc;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1rem;
+    width: 100%;
+    border-radius: 4rem;
+    font-size: 3rem;
+    background-color: rgba(55, 124, 204, 0.212);
+    color: #fff;
+    width: 80%;
+    margin-left: 3rem;
+
+    
+
+    
+    
+    
+}
+.formulario input[type="submit"] {
+    background-image: linear-gradient(to bottom, #918e8e, #ffffff);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 70%;
+    margin-left: 7rem;
+    font-size: 3rem;
+   
+
+
+}
+
+input[type="submit"]:hover {
+    background-image: linear-gradient(to bottom, #030303, #434444);
+}
+
+@media (min-width: 768px) {
+    .formulario input[type="submit"] {
+        display: block;
+        padding: 1rem 5rem;
+        
+    }
+}
+.formulario input[type="submit"]:hover {
+    background-color: #042a67;
+    cursor: pointer;
+}
+
+.formulario select {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    
+    text-align: center;
+    background-color: #64748b;
+}
+
+.alerta {
+    padding: 2rem 5rem;
+    max-width: 60rem;
+    margin: 2rem auto 2rem auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.alerta.error {
+    background-color: #880000;
+    border: 2px solid #ff0000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+}
+.alerta.success {
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 80rem;
+    margin: 0 auto;
+   
+}
+.contenedor-filtro{
+    max-height: 20rem;
+    margin-bottom: 15rem;
+}
+
+.contenedor-presupuesto {
+    
+
+    background-image: linear-gradient(to right, #888686, #dadada);
+    margin-top: 5rem;
+    box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(30rem);
+    border-radius: 1rem;
+    padding: 2rem;
+    
+}
+.dos-columnas {
+    flex-direction: column;
+}
+.dos-columnas :first-child {
+    margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .dos-columnas {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+    .dos-columnas > div {
+        width: 50%;
+    }
+    .dos-columnas :first-child {
+        margin-bottom: 0;
+    }
+}
+.formulario input[type="text"].nuevo-presupuesto, 
+.formulario input[type="number"].nuevo-presupuesto {
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.contenedor-presupuesto svg {
+    width: 25rem;
+}
+
+.contenido-presupuesto {
+    width: 100%;
+    font-family: var(--font-family3);
+    
+}
+.contenido-presupuesto p {
+    font-weight: 400;
+    color: var(--color1);
+    font-size: 2.4rem;
+    text-align: center;
+    font-size: 4rem;
+}
+@media (min-width: 768px) {
+    .contenido-presupuesto p {
+        text-align: left;
+    }
+}
+.contenido-presupuesto p.negativo,
+.contenido-presupuesto p.negativo span {
+    color: #E5514F;
+}
+.contenido-presupuesto span {
+    font-weight: 900;
+    
+    color: var(--blanco);
+    
+}
+.reset-app {
+    border: none;
+    background-color: #770c0c;
+    background-image: linear-gradient(to bottom right, #61050d, #eb4343);
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: var(--font-family5);
+    font-weight: 900;
+    border-radius: 1rem;
+    transition-property: background-color, box-shadow;
+    transition-duration: 300ms;
+    opacity: 0.9;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .reset-app:hover {
+    background-color: #eb5050;
+    background-image: none;
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.4);
+  }
+
+main {
+    padding-top: 10rem;
+}
+
+.filtros .campo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 20rem;
+    
+}
+.filtros label {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--gris-oscuro);
+}
+.filtros select {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: var(--gris-claro);
+}
+
+.listado-gastos {
+    margin-top: 5rem;
+    margin-left: 50rem;
+}
+.listado-gastos h2 {
+    color: var(--gris-oscuro);
+    font-weight: 900;
+}
+.no-gastos {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.gasto {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    
+    width: 90%;
+    background-color: var(--gris-oscuro);
+    
+
+}
+
+.cantidad-gasto {
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: 900;
+    
+}
+
+.contenido-gasto {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contenido-gasto img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 0.5rem;
+    transform: rotate(45deg);
+}
+
+.descripcion-gasto{
+    color: #dadada;
+}
+
+.descripcion-gasto p {
+    margin: 0 0 1rem 0;
+    
+    font-family: var(--font-family5);
+    
+    
+}
+.descripcion-gasto .categoria {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.descripcion-gasto p {
+    margin-bottom: 1rem;
+    
+}
+.descripcion-gasto .nombre-gasto {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.descripcion-gasto .nombre-gasto:hover {
+    cursor: pointer;
+}
+.descripcion-gasto .fecha-gasto {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+}
+.descripcion-gasto .fecha-gasto span {
+    font-weight: 800;
+    color: #fff;;
+}
+
+.nuevo-gasto {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+}
+
+.nuevo-gasto img {
+    width: 5rem;
+}
+.nuevo-gasto img:hover {
+    cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    background-color: rgb(0 0 0 / 0.92);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.modal .cerrar-modal {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    width: 3rem;
+    height: 3rem;
+}
+.modal .cerrar-modal img {
+    width: 100%;
+}
+
+.modal .formulario {
+    max-width: 80rem;
+    width: 40rem;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    opacity: 0;
+}
+.modal label {
+    color: var(--blanco);
+}
+body .modal {
+    overflow: hidden;
+}
+
+.modal .formulario.animar {
+    position: relative;
+    opacity: 1;
+}
+
+.modal .formulario.cerrar {
+    opacity: 0.5;
+}
+
+.modal label {
+    text-align: left;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+    font-size: 1rem !important;
+    
+}
+
+/*** SWIPE LIST OVERRIDES **/
+.swipe-action__leading {
+    background-color: var(--azul);
+    color: var(--blanco);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+.swipe-action__trailing {
+    background-color: #970505;
+    color: var(--blanco);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.swipeable-list .swipe-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    text-align: right;
+}
+
+/*Swetalert*/
+
+.swal2-modal {
+    width: 70rem !important;
+    height: 30rem;
+    
+  }
+  .swal2-title, .swal2-content {
+    font-size: 4rem !important;
+    font-family: var(--font-family2);
+  }
+
+  .swal2-actions button {
+    font-size: 3rem !important;
+  }
+
+  .swal2-icon {
+    width: 8rem !important;
+    height: 8rem !important;
+  }
